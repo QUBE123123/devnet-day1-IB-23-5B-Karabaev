@@ -1,18 +1,21 @@
-# Day 2 Report — Data Formats & Parsing
+# Day 2 Report — Data Formats & RESTCONF
 
-## 1) Student
+## 1) Student Info
 - **Name:** Karabaev Alikhan
 - **Group:** IB-23-5b
+- **Token:** D1-IB-23-5b-09-F0C3
+- **Repo:** https://github.com/QUBE123123/devnet-day1-IB-23-5b-karabaev
 
 ## 2) Timing (270 min)
-- 0–90: Изучение структур XML, JSON, YAML
-- 90–180: Написание скриптов кросс-парсинга (day2_data_formats.py)
-- 180–270: Тестирование валидации через jsonschema
+- 0–90: Анализ структур JSON, XML и YAML. Сравнение иерархий.
+- 90–180: Написание универсального парсера в src/day2_data_formats.py.
+- 180–240: Изучение RESTCONF и структуры leaf-узлов.
+- 240–270: Валидация всех форматов через автоматические тесты.
 
 ## 3) Evidence checklist
-- artifacts/day2/parsing/books.json: [Есть]
-- artifacts/day2/parsing/books.xml: [Есть]
-- artifacts/day2/parsing/books.yaml: [Есть]
+- artifacts/day2/parsing/books.json: [Валидно]
+- artifacts/day2/parsing/books.xml: [Валидно]
+- artifacts/day2/parsing/books.yaml: [Валидно]
 
 ## 4) Commands output
 ```text
@@ -21,5 +24,8 @@ pytest -q tests/test_day2_data_formats.py
 ```
 
 ## 5) Проблемы и решения
-- **Проблема:** Ошибка валидации XML из-за неправильного корневого тега.
-- **Решение:** Исправил структуру в скрипте, добавив обязательный заголовок XML.
+- **Проблема:** Библиотека xmltodict генерировала структуру, которая не проходила валидацию по схеме.
+- **Решение:** Добавил принудительную фильтрацию корневых элементов при конвертации из XML в JSON.
+
+## 6) Рефлексия
+Понимание того, как данные трансформируются между форматами, необходимо для работы с мульти-вендорным оборудованием, где одно устройство может отдавать XML, а другое JSON.
