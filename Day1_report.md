@@ -1,33 +1,45 @@
-# Day 1 Report — Environment Setup & Hello API
+# Day 1 Report — DevNet Sprint
 
-## 1) Student Info
-- **Name:** Karabaev Alikhan
-- **Group:** IB-23-5b
-- **Token:** D1-IB-23-5b-09-F0C3
-- **Repo:** https://github.com/QUBE123123/devnet-day1-IB-23-5b-karabaev
+## 1. Student
+- Name: Karabaev Alikhan
+- Group: IB-23-5b
+- GitHub repo: https://github.com/QUBE123123/devnet-day1-IB-23-5b-karabaev
+- Day1 Token: D1-IB-23-5b-09-F0C3
 
-## 2) Timing (270 min)
-- 0–60: Установка и базовая настройка Ubuntu DEVASC VM.
-- 60–120: Создание виртуального окружения Python и установка зависимостей.
-- 120–210: Настройка Git: генерация SSH-ключей, создание PAT-токена и привязка удаленного репозитория.
-- 210–270: Проверка API-связности и написание базового скрипта приветствия.
+## 2. NetAcad progress (Module 1)
+- Completed items: 1.1 Introduction / 1.2 Networking Basics / 1.3 IPv4 & IPv6
+- Screenshot(s): [Вставь скриншот из NetAcad здесь]
 
-## 3) Evidence checklist
-- artifacts/day1/environment_setup.json: [Подтверждено]
-- artifacts/day1/pip_freeze.txt: [Подтверждено]
-- src/day1_api_hello.py: [Код проверен]
+## 3. VM evidence
+- File: `artifacts/day1/env.txt` exists: Yes
+- Screenshot(s): [Вставь скриншот терминала DEVASC VM здесь]
 
-## 4) Commands output
+## 4. Repo structure (must match assignment)
+- `src/day1_api_hello.py` : Yes
+- `tests/test_day1_api_hello.py` : Yes
+- `schemas/day1_summary.schema.json` : Yes
+- `artifacts/day1/summary.json` : Yes
+- `artifacts/day1/response.json` : Yes
+
+## 5. Commands run (paste EXACT output)
+### 5.1 Script run
 ```text
-python3 src/day1_api_hello.py
-# Output: Hello DevNet! Student: Karabaev Alikhan, Group: IB-23-5b
-pytest -q tests/test_day1_api_hello.py
-# Result: 1 passed
+Hello DevNet! Student: Karabaev Alikhan, Group: IB-23-5b
+Data saved to artifacts/day1/response.json
+```
+### 5.2 Tests
+```text
+.                                                                        [100%]
+1 passed in 0.05s
 ```
 
-## 5) Проблемы и решения
-- **Проблема:** Git запрашивал пароль при каждом пуше, но обычный пароль от GitHub не принимался.
-- **Решение:** Создал классический Personal Access Token (PAT) в настройках GitHub и использовал его вместо пароля.
+## 6. Что я изучил сегодня (3–6 bullets)
+- Настройка виртуальной среды DEVASC VM и Python Venv.
+- Основы работы с Git и GitHub (SSH ключи, PAT токены).
+- Взаимодействие с базовыми REST API через библиотеку requests.
+- Валидация JSON структур с помощью jsonschema.
 
-## 6) Рефлексия
-Первый день заложил фундамент. Работа с виртуальными окружениями Python позволяет избежать конфликтов библиотек, а правильная настройка Git критически важна для командной разработки.
+## 7. Проблемы и решения
+Problem: Git authentication failed (Password not accepted).
+Fix: Created and used a Personal Access Token (PAT) instead of a standard password.
+Proof (file/screenshot/command): git push successful.
