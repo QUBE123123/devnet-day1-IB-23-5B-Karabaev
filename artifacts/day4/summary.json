@@ -1,0 +1,28 @@
+{
+  "checks": {
+    "ansible_port_8081": true,
+    "docker_token_in_page": true,
+    "docker_tokenproof": true,
+    "jenkins_pipeline_has_stages": true,
+    "security_db_has_tables": true
+  },
+  "evidence_sha256": {
+    "ansible_playbook_install": "2c7394424e97165b4698756ece370e7f8c2f0a00f07fd6be0b9e9bb26e0ab56b",
+    "db_tables": "3391b597d7d61586c64c32e08f949fe8c332646c73e66c7f63099ef86503f407",
+    "docker_sampleapp_curl": "23de9dab230a7e3ae0595b2e7c145cb76a30c9f72ce2ece3f5d892cb99bdae2e",
+    "pipeline_console": "059e19f289532163cae3835220a5b21f7c7fe86507731affd1a3adc6cc5abd32"
+  },
+  "generated_utc": "2026-04-05T12:56:49.029487+00:00",
+  "run": {
+    "platform": "linux",
+    "python": "3.8.2"
+  },
+  "schema_version": "4.1",
+  "student": {
+    "group": "IB-23-5b",
+    "name": "Karabaev Alikhan",
+    "token": "D1-IB-23-5b-09-F0C3",
+    "token_hash8": "ecf90ce5"
+  },
+  "validation_passed": true
+}

@@ -1,0 +1,87 @@
+Sending build context to Docker daemon  46.04MB
+Step 1/5 : FROM python:3.8-buster
+3.8-buster: Pulling from library/python
+ac8bb7e1a323: Pulling fs layer
+3b1c264c0ad4: Pulling fs layer
+b1e7e053c9f6: Pulling fs layer
+a2e1e233599c: Pulling fs layer
+0ebfe287e976: Pulling fs layer
+819d305a9b22: Pulling fs layer
+a11e135762f0: Pulling fs layer
+5e4e21ea7d04: Pulling fs layer
+a2e1e233599c: Waiting
+0ebfe287e976: Waiting
+819d305a9b22: Waiting
+a11e135762f0: Waiting
+5e4e21ea7d04: Waiting
+3b1c264c0ad4: Verifying Checksum
+3b1c264c0ad4: Download complete
+ac8bb7e1a323: Verifying Checksum
+ac8bb7e1a323: Download complete
+0ebfe287e976: Verifying Checksum
+0ebfe287e976: Download complete
+ac8bb7e1a323: Pull complete
+3b1c264c0ad4: Pull complete
+b1e7e053c9f6: Verifying Checksum
+b1e7e053c9f6: Download complete
+819d305a9b22: Verifying Checksum
+819d305a9b22: Download complete
+a11e135762f0: Verifying Checksum
+a11e135762f0: Download complete
+a2e1e233599c: Verifying Checksum
+a2e1e233599c: Download complete
+5e4e21ea7d04: Verifying Checksum
+5e4e21ea7d04: Download complete
+b1e7e053c9f6: Pull complete
+a2e1e233599c: Pull complete
+0ebfe287e976: Pull complete
+819d305a9b22: Pull complete
+a11e135762f0: Pull complete
+5e4e21ea7d04: Pull complete
+Digest: sha256:04c3f641c2254c229fd2f704c5199ff4bea57d26c1c29008ae3a4afddde98709
+Status: Downloaded newer image for python:3.8-buster
+ ---> 406c7153026b
+Step 2/5 : RUN pip install flask
+ ---> Running in 99cdd2b1f2b9
+Collecting flask
+  Downloading flask-3.0.3-py3-none-any.whl (101 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 101.7/101.7 kB 616.5 kB/s eta 0:00:00
+Collecting importlib-metadata>=3.6.0
+  Downloading importlib_metadata-8.5.0-py3-none-any.whl (26 kB)
+Collecting click>=8.1.3
+  Downloading click-8.1.8-py3-none-any.whl (98 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.2/98.2 kB 2.5 MB/s eta 0:00:00
+Collecting itsdangerous>=2.1.2
+  Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Collecting Werkzeug>=3.0.0
+  Downloading werkzeug-3.0.6-py3-none-any.whl (227 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 228.0/228.0 kB 2.0 MB/s eta 0:00:00
+Collecting Jinja2>=3.1.2
+  Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 10.5 MB/s eta 0:00:00
+Collecting blinker>=1.6.2
+  Downloading blinker-1.8.2-py3-none-any.whl (9.5 kB)
+Collecting zipp>=3.20
+  Downloading zipp-3.20.2-py3-none-any.whl (9.2 kB)
+Collecting MarkupSafe>=2.0
+  Downloading MarkupSafe-2.1.5-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (26 kB)
+Installing collected packages: zipp, MarkupSafe, itsdangerous, click, blinker, Werkzeug, Jinja2, importlib-metadata, flask
+Successfully installed Jinja2-3.1.6 MarkupSafe-2.1.5 Werkzeug-3.0.6 blinker-1.8.2 click-8.1.8 flask-3.0.3 importlib-metadata-8.5.0 itsdangerous-2.2.0 zipp-3.20.2
+[91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[0m[91m
+[notice] A new release of pip is available: 23.0.1 -> 25.0.1
+[notice] To update, run: pip install --upgrade pip
+[0mRemoving intermediate container 99cdd2b1f2b9
+ ---> a980a22ad6cd
+Step 3/5 : COPY sample_app.py /app/sample_app.py
+ ---> 3f4526c43c98
+Step 4/5 : EXPOSE 8080
+ ---> Running in 8f15c52b8963
+Removing intermediate container 8f15c52b8963
+ ---> a3e2979489a7
+Step 5/5 : CMD ["python", "/app/sample_app.py"]
+ ---> Running in 587c0438409c
+Removing intermediate container 587c0438409c
+ ---> 5641f85827e4
+Successfully built 5641f85827e4
+Successfully tagged sampleapp:day4

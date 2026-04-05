@@ -1,0 +1,5 @@
+Started by user Alikhan
+[Pipeline] Stage: Preparation
+[Pipeline] Stage: Build
+[Pipeline] Stage: Results
+Finished: SUCCESS
