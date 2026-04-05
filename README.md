@@ -1,1 +1,1 @@
-Initial line for conflict test
+Line changed by branch A
