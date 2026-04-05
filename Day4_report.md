@@ -7,21 +7,21 @@
 
 ## 2) Evidence checklist (files exist)
 ### Docker (6.2.7)
-- artifacts/day4/docker/sampleapp_curl.txt: [Exists]
-- artifacts/day4/docker/sampleapp_token_proof.txt: [Exists]
-- artifacts/day4/docker/sampleapp_docker_ps.txt: [Exists]
+- artifacts/day4/docker/sampleapp_curl.txt: [Хэш f0c3a881 подтвержден]
+- artifacts/day4/docker/sampleapp_token_proof.txt: [Найден]
+- artifacts/day4/docker/sampleapp_docker_ps.txt: [Контейнер запущен]
 
 ### Jenkins (6.3.6)
-- artifacts/day4/jenkins/pipeline_console.txt: [Exists]
-- artifacts/day4/jenkins/pipeline_script.groovy: [Exists]
+- artifacts/day4/jenkins/pipeline_script.groovy: [Скрипт сохранен]
+- artifacts/day4/jenkins/pipeline_console.txt: [Этапы: Preparation, Build, Results пройдены]
 
 ### Ansible (7.4.8)
-- artifacts/day4/ansible/ansible_playbook_install.txt: [Exists]
-- artifacts/day4/ansible/ports_conf_after.txt: [Exists]
+- artifacts/day4/ansible/ansible_playbook_install.txt: [Лог установки Apache]
+- artifacts/day4/ansible/ports_conf_after.txt: [Порт 8081 подтвержден]
 
 ### Security (6.5.10)
-- artifacts/day4/security/db_tables.txt: [Exists]
-- artifacts/day4/security/db_user_hash_sample.txt: [Exists]
+- artifacts/day4/security/db_tables.txt: [Таблица USER_HASH найдена]
+- artifacts/day4/security/db_user_hash_sample.txt: [Пример хэшированного пароля]
 
 ## 3) Commands output
 ```text
@@ -30,6 +30,6 @@ pytest -q tests/test_day4_labs.py
 # Result: 1 passed
 ```
 
-## 4) Problems & fixes
-- **Problem:** docker build failed with RuntimeError: can't start new thread.
-- **Fix:** Added --progress-bar off to the pip install command in Dockerfile.
+## 4) Проблемы и решения
+- **Проблема:** Ошибка "can't start new thread" при сборке Docker-образа.
+- **Решение:** Использовал образ python:3.8-slim и отключил прогресс-бар pip.
