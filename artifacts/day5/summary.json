@@ -1,0 +1,13 @@
+{
+  "schema_version": "5.0",
+  "student": {
+    "name": "Suleimanov Timur",
+    "hash": "f0c3a881"
+  },
+  "checks": {
+    "yang_tree_valid": true,
+    "webex_room_contains_hash": true,
+    "pt_ticket_received": true
+  },
+  "validation_passed": true
+}

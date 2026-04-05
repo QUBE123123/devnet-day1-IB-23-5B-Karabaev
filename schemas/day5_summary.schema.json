@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schema_version", "student", "checks", "validation_passed"],
+  "properties": {
+    "schema_version": { "type": "string", "const": "5.0" },
+    "validation_passed": { "type": "boolean", "const": true }
+  }
+}
